@@ -10,7 +10,10 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
+<<<<<<< HEAD
     "react-router-dom": "^6.3.0",
+=======
+>>>>>>> db5809d7861e9b7e4d9b6692a3fce4cd8054ffb6
     "react-scripts": "4.0.2",
     "react-simple-star-rating": "^4.0.5",
     "react-star-rating-component": "^1.4.1",
