@@ -41,11 +41,19 @@ margin-top:15px
 .card-body{
   color : black
 }
-.title {
+.titre {
   color : black;
 }
 
-.description {color : black}
+.description 
+{color : black;
+  font-size:14px;
+
+}
+.pgimg{
+  width:400px;
+  height: 600px;
+}
 .posteUrl{color : black}
 .App-header {
   background-color: #fde661;

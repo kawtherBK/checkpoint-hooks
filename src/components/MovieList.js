@@ -7,10 +7,12 @@ import CardDeck from "react-bootstrap/CardDeck";
 import Filter from "./Filter";
 import Add from "./ModalInput";
 import { useState } from "react";
+import{ Link} from "react-router-dom";
 import StarRatingComponent from "react-star-rating-component";
 
 
-function ListMovies(props) {
+function MovieList(props) {
+  console.log(props.movies)
   const [search, setSearch] = useState("");
   const [raiting, setRaiting] = useState(1);
 
@@ -41,12 +43,13 @@ function ListMovies(props) {
 
               <Card.Body className="card-body">
                 <Card.Title>{el.title}</Card.Title>
-                <h6>{el.description}</h6>
+                <Link to={`/description/${el.id}`}> Description</Link>
               </Card.Body>
             </Card>
           ))}
       </CardDeck>
+     
     </>
   );
 }
-export default ListMovies;
+export default MovieList;
