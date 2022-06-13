@@ -4,14 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Add from './components/ModalInput';
 import MovieList from './components/MovieList'
 import { useState } from "react"
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as  uuidv4} from 'uuid';
+import { useId } from 'react';
 import Description from "./components/Description";
 import {Routes, Route } from "react-router-dom";
 
 const App = ()=>{
   const [movies , setMovies] = useState([
     {
-    id : uuidv4(),
+    id :uuidv4(),
     title: "la reine des neiges 2",
     description: "Anna, une jeune fille aussi audacieuse qu’optimiste, se lance dans un incroyable voyage en compagnie de Kristoff",
     posterUrl :'/assets/images/la reine.jpeg',
@@ -25,7 +26,7 @@ const App = ()=>{
     rate : "3"
   },
   {
-    id : uuidv4(),
+    id :uuidv4(),
     title: "Jumanji",
     description: "Quatre lycéens découvrent une vieille console contenant un jeu vidéo dont ils n’avaient jamais entendu parler : Jumanji.",
     posterUrl :  '/assets/images/Jumanji.jpg',

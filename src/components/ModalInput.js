@@ -7,12 +7,13 @@ import ModalHeader from "react-bootstrap/ModalHeader";
 import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
 import Button from "react-bootstrap/Button";
-import { useState , useRef } from "react"
+import { useState , useRef, useId } from "react"
 import Form from 'react-bootstrap/Form'
+import { v4 as  uuidv4} from 'uuid';
 
 
 function Add (props){
-  const [id, setId] = useState("");
+  const [id, setId] = useState(uuidv4());
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [posterUrl, setPosterUrl] = useState("");
@@ -43,10 +44,7 @@ function Add (props){
         </Modal.Header>
         <Modal.Body>
         <Form>
-             <Form.Group>
-                <Form.Label>ID: </Form.Label>
-                <Form.Control type="text" name ="id" placeholder="Enter id"  onChange={event => setId(event.target.value)} />
-            </Form.Group>
+            
       
               <Form.Group>
                 <Form.Label>Title :   </Form.Label>
